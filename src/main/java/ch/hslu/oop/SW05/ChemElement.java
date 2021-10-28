@@ -1,6 +1,6 @@
 package ch.hslu.oop.SW05;
 
-public class ChemElement{
+public abstract class ChemElement{
     private String elementName;
     private float meltingPoint;
     private float boilingPoint;
