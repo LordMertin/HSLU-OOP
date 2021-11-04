@@ -37,7 +37,7 @@ public class Rectangle extends Shape {
         Shape shape = (Rectangle) rectangle;
         shape.move(1, 2);
         if(shape instanceof Rectangle){
-            ((Rectangle)shape).getArea();
+            System.out.println("gringy: " + ((Rectangle)shape).getArea());
         }
     }
 }
