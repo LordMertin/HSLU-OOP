@@ -20,6 +20,12 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>nl.jqno.equalsverifier</groupId>
+            <artifactId>equalsverifier</artifactId>
+            <version>3.7.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <properties>

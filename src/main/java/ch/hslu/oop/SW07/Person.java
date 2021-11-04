@@ -42,13 +42,12 @@ public class Person implements Comparable<Person> {
 
     @Override
     public final boolean equals(final Object object){
-        if(!(object instanceof Person)){
+        if(!(object instanceof final Person person)){
             return false;
         }
         if(this == object){
             return true;
         }
-        final Person person = (Person)object;
         return (this.id == person.id);
     }
 
@@ -68,6 +67,13 @@ public class Person implements Comparable<Person> {
     }
     public String getFirstName(){
         return firstName;
+    }
+    public long getId(){
+        return id;
+    }
+
+    public static void main(String[] args) {
+
     }
 
 }
