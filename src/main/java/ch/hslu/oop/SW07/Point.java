@@ -47,7 +47,7 @@ public class Point {
     }
 
 	@Override
-	public boolean equals(Object object) {
+	public final boolean equals(Object object) {
 		if (this == object) {
 			return true;
 		}
@@ -59,7 +59,7 @@ public class Point {
 	}
 
 	@Override
-	public int hashCode() {
+	public final int hashCode() {
 		return Objects.hash(x, y);
 	}
 

@@ -38,17 +38,19 @@ public class Person implements Comparable<Person> {
 
     @Override
     public final boolean equals(final Object object){
-        if(!(object instanceof final Person person)){
-            return false;
-        }
         if(this == object){
             return true;
         }
+
+        if(!(object instanceof final Person person)){
+            return false;
+        }
+
         return (this.id == person.id);
     }
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return Objects.hash(id);
     }
 

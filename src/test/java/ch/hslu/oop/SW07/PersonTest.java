@@ -27,6 +27,7 @@ class PersonTest {
         assertEquals(2, new Person(2, "Test", "ID").getId());
     }
 
+    //equals
     @Test
     public void testEqualsTrue() {
         assertTrue(new Person("Höger", "Martin").equals(new Person("Höger", "Martin")));
@@ -37,11 +38,13 @@ class PersonTest {
         assertFalse(new Person(0,"Höger", "Martin").equals(new Person(1,"Höger", "Martin")));
     }
 
+    //hashCode
     @Test
     public void testHash() {
         assertEquals(new Person("Höger", "Martin").hashCode(), new Person("Höger", "Martin").hashCode());
     }
 
+    //compareTo
     @Test
     public void testCompareToTrue() {
         assertEquals(0, new Person(1, "Höger", "Martin").compareTo(new Person(1, "Höger", "Martin")));
@@ -57,10 +60,10 @@ class PersonTest {
         assertEquals(-1, new Person(1, "Höger", "Martin").compareTo(new Person(2, "Höger", "Martin")));
     }
 
-    //ka what this is aber failed halt lmao
+    //equalsVerifier - doesn't work
     @Test
     public void testEqualsVerifier(){
-        EqualsVerifier.simple().forClass(Person.class).verify();
+        EqualsVerifier.forClass(Person.class).withOnlyTheseFields("id").verify();
     }
 
 }

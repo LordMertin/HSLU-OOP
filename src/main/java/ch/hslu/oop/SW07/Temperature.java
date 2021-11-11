@@ -101,7 +101,7 @@ public class Temperature {
     }
 
     @Override
-    public boolean equals(Object object) {
+    public final boolean equals(Object object) {
         if (this == object) {
             return true;
         }
@@ -114,7 +114,7 @@ public class Temperature {
 
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return Objects.hash(currentTemperatureInC);
     }
 
