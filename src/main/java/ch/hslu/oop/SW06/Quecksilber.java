@@ -1,7 +1,5 @@
 package ch.hslu.oop.SW06;
 
-import java.security.PublicKey;
-
 public class Quecksilber extends Element{
 
     public Quecksilber(){

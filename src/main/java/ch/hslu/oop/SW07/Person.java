@@ -1,8 +1,8 @@
 package ch.hslu.oop.SW07;
 
-import java.util.Arrays;
 import java.util.Objects;
 
+//public class Person implements Comparator<Person> {
 public class Person implements Comparable<Person> {
     private final long id;
     private String lastName, firstName;
@@ -37,11 +37,6 @@ public class Person implements Comparable<Person> {
     */
 
     @Override
-    public int compareTo(Person other) {
-        return Long.compare(this.id, other.id);
-    }
-
-    @Override
     public final boolean equals(final Object object){
         if(!(object instanceof final Person person)){
             return false;
@@ -55,6 +50,11 @@ public class Person implements Comparable<Person> {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return Long.compare(this.id, other.id);
     }
 
     public void setLastName(String lastName){
@@ -74,9 +74,12 @@ public class Person implements Comparable<Person> {
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person(1, "mertin", "hoeger");
-        Person p2 = new Person(2, "nico", "igel");
-        Person p3 = new Person(3, "affi", "angel");
+        Person person = new Person(1, "Hoeger", "Martin");
+
+        System.out.println(person);
+        person.setFirstName("Mertin");
+        person.setLastName("Höger");
+        System.out.println(person);
     }
 
 }
