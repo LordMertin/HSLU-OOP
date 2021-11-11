@@ -62,4 +62,5 @@ class PersonTest {
     public void testEqualsVerifier(){
         EqualsVerifier.simple().forClass(Person.class).verify();
     }
+
 }

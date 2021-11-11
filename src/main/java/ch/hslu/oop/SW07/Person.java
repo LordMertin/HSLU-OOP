@@ -1,5 +1,6 @@
 package ch.hslu.oop.SW07;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Person implements Comparable<Person> {
@@ -17,7 +18,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public String toString(){
-        return this.id + "\n" + this.lastName + "\n" + this.firstName;
+        return "ID: " + this.id + ", Lastname: " + this.lastName + ", Firstname: " + this.firstName;
     }
 
     /*
@@ -73,7 +74,9 @@ public class Person implements Comparable<Person> {
     }
 
     public static void main(String[] args) {
-
+        Person p1 = new Person(1, "mertin", "hoeger");
+        Person p2 = new Person(2, "nico", "igel");
+        Person p3 = new Person(3, "affi", "angel");
     }
 
 }

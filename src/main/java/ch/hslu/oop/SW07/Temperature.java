@@ -101,12 +101,17 @@ public class Temperature {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Temperature that = (Temperature) o;
-        return Float.compare(that.currentTemperatureInC, currentTemperatureInC) == 0;
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (!(object instanceof final Temperature temperature)){
+            return false;
+        }
+
+        return Float.compare(temperature.currentTemperatureInC, this.currentTemperatureInC) == 0;
     }
+
 
     @Override
     public int hashCode() {
