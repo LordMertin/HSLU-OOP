@@ -39,8 +39,12 @@ public final class Temperature implements Comparable<Temperature> {
     }
 
     @Override
-    public String toString(){
-        return "current temperature:\nCelsius: " + this.getCelsius() + "\nFahrenheit: " + this.getFahrenheit() + "\nKelvin: " + this.getKelvin();
+    public String toString() {
+        return "Temperature{" +
+                "kelvin=" + kelvin +
+                ", celsius=" + getCelsius() +
+                ", fahrenheit=" + getFahrenheit() +
+                '}';
     }
 
     public int compareTo(Temperature other) {
