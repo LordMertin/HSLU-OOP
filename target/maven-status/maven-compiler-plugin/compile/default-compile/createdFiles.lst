@@ -1,10 +1,12 @@
 ch\hslu\oop\SW05\CountingSwitchable.class
+ch\hslu\oop\SW08\TemperatureHistory.class
 ch\hslu\oop\SW05\Square.class
 ch\hslu\oop\SW06\Point.class
 ch\hslu\oop\SW05\ChemElement.class
 ch\hslu\oop\SW05\Shape.class
 ch\hslu\oop\SW06\Shape.class
 ch\hslu\oop\SW03\Temperature.class
+ch\hslu\oop\SW08\State.class
 ch\hslu\oop\SW07\Point.class
 ch\hslu\oop\SW04\Engine.class
 ch\hslu\oop\SW05\Circle.class
@@ -14,6 +16,7 @@ ch\hslu\oop\SW02\DatatypeMath.class
 ch\hslu\oop\SW06\Rectangle.class
 ch\hslu\oop\SW06\Demo.class
 ch\hslu\oop\SW04\Car.class
+ch\hslu\oop\SW08\Quecksilber.class
 ch\hslu\oop\SW08\Temperature.class
 ch\hslu\oop\SW03\Element.class
 ch\hslu\oop\SW06\Max.class
@@ -22,6 +25,7 @@ ch\hslu\oop\SW07\Temperature.class
 ch\hslu\oop\SW04\Line.class
 ch\hslu\oop\SW02\TemperatureSW02.class
 ch\hslu\oop\SW05\Rectangle.class
+ch\hslu\oop\SW08\Element.class
 ch\hslu\oop\SW04\Light.class
 ch\hslu\oop\SW03\minmax.class
 ch\hslu\oop\SW04\isSwitchable.class
