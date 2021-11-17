@@ -39,7 +39,7 @@ public final class Temperature implements Comparable<Temperature> {
     }
 
     @Override
-    public String toString() {
+        public String toString() {
         return "Temperature{" +
                 "kelvin=" + kelvin +
                 ", celsius=" + getCelsius() +

@@ -66,4 +66,11 @@ class TemperatureTest {
         assertEquals(-1, new Temperature(10f).compareTo(new Temperature(20f)));
     }
 
+    @Test
+    public void testToString(){
+        Temperature temp = new Temperature(20f);
+        assertEquals("Temperature{kelvin=" + temp.getKelvin()+ ", celsius=" + temp.getCelsius() + ", fahrenheit=" + temp.getFahrenheit() + "}", temp.toString());
+        //"Temperature{kelvin=293.15, celsius=20.0, fahrenheit=68.0}"
+    }
+
 }

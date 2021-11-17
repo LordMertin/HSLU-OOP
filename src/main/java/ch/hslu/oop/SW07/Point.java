@@ -21,12 +21,7 @@ public class Point {
     public int getY(){
         return y;
     }
-    
-	/** 
-	 * @param x
-	 * @param y
-	 * @return int
-	 */
+
 	public int getQuadrant(int x, int y){
         if ((x == 0) || (y == 0)) {
 			return 0;
@@ -63,9 +58,6 @@ public class Point {
 		return Objects.hash(x, y);
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
         Point punkt1 = new Point(1,5);
         int quadrant = punkt1.getQuadrant(punkt1.x, punkt1.y);
