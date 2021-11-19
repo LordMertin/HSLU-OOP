@@ -88,22 +88,6 @@ public final class Temperature implements Comparable<Temperature> {
     }
 
     public static void main(String[] args) {
-        /*
-        String input = "";
-        Scanner scanner = new Scanner(System.in);
-        do {
-            try{
-                System.out.print("Bitte Temperatur eingeben ('exit' zum Beenden): ");
-                input = scanner.next();
-                float value = Float.valueOf(input);
-                System.out.println(input);
-            } catch (Exception e){
-                System.out.println(e + ", your input: \"" + input + "\" is not acceptable.");
-            }
-
-        } while (!input.equals("exit"));
-        System.out.println("Programm beendet.");
-        */
 
         try {
             Temperature t = Temperature.createFromKelvin(-1);
