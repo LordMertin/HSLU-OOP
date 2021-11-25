@@ -1,4 +1,4 @@
-package ch.hslu.oop.SW10;
+package ch.hslu.oop.SW10.CarExercise;
 
 public interface Switchable {
     public abstract void switchOn();
