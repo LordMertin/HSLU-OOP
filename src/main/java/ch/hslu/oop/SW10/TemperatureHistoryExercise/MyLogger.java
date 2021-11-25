@@ -19,7 +19,7 @@ public class MyLogger {
                 value = Float.parseFloat(input);
                 LOG.info("Eingegebene Temparatur: " + input);
                 temperatureHistory.add(Temperature.createFromCelsius(value));
-                temperatureHistory.addPropertyChangeListener(e -> LOG.info("Scanner: TemperatureHistory changed"));
+                temperatureHistory.addPropertyChangeListener(e -> {});
 
 
             } catch (NumberFormatException e) {
@@ -28,7 +28,7 @@ public class MyLogger {
                 LOG.severe(e.getMessage());
             }
         } while (!input.equals("exit"));
-        LOG.info("Programm beendet.");
         LOG.info(temperatureHistory.toString());
+        LOG.info("Programm beendet.");
     }
 }
