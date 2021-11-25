@@ -1,7 +1,6 @@
 package ch.hslu.oop.SW10.TemperatureHistoryExercise;
 
 import ch.hslu.oop.SW09.MyLogger;
-import ch.hslu.oop.SW10.CarExercise.Status;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -20,19 +19,17 @@ public class TemperatureHistory {
         temperatures = new ArrayList<Temperature>();
     }
     public void add(Temperature temperature){
-        float max = this.getHighest();
-        float min = this.getLowest();
-        if(Float.compare(max, temperature.getCelsius()) == -1){
+        if(temperature.getCelsius() > this.getHighest()){
             //fire event- a new max temp is here
-            final PropertyChangeEvent pcEvent = new PropertyChangeEvent(this, "temperatures", max, temperature.getCelsius());
+            final PropertyChangeEvent pcEvent = new PropertyChangeEvent(this, TemperatureEnum.MAX.name(), this.getHighest(), temperature.getCelsius());
             this.firePropertyChangeEvent(pcEvent);
-            LOG.info("a new highest temperature got added");
+            LOG.info("Registered a new max temperature (" + temperature.getCelsius() + "°C)");
         }
-        if(Float.compare(min, temperature.getCelsius()) == 1){
+        if(temperature.getCelsius() < this.getLowest()){
             //fire event- a new min temp is here
-            final PropertyChangeEvent pcEvent = new PropertyChangeEvent(this, "temperatures", min, temperature.getCelsius());
+            final PropertyChangeEvent pcEvent = new PropertyChangeEvent(this, TemperatureEnum.MIN.name(), this.getLowest(), temperature.getCelsius());
             this.firePropertyChangeEvent(pcEvent);
-            LOG.info("a new lowest temperature got added");
+            LOG.info("Registered a new min temperature (" + temperature.getCelsius() + "°C)");
         }
         temperatures.add(temperature);
     }
