@@ -62,12 +62,17 @@ public class TemperatureHistory {
         return 0f;
     }
 
+    public final Temperature get(final int index){
+        List<Temperature> list = new ArrayList(temperatures);
+        return list.get(index);
+    }
+
     @Override
     public String toString(){
         return "TemperatureHistory{ Count: " + this.getCount() + ", " +
-                "Average: " + this.getAverage() + ", " +
-                "Highest temperature: " + this.getHighest() + ", " +
-                "Lowest Temperature: " + this.getLowest() + " }";
+                "Average: " + this.getAverage() + "°C, " +
+                "Highest temperature: " + this.getHighest() + "°C, " +
+                "Lowest Temperature: " + this.getLowest() + "°C }";
     }
 
     public void addPropertyChangeListener(final PropertyChangeListener listener) {
